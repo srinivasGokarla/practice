@@ -2,14 +2,15 @@ import React, {useState,useEffect} from "react"
 
 
 const Fetch = () => {
-    const [data,setData] = useState(null)
-      const getData = () => 
+    const[data, setData] = useState(null);
+    const getData = () => 
       fetch("https://snapdeal-backend.herokuapp.com/men")
       .then((res)=> res.json())
-
+    
     useEffect(() => {
-        getData().then((data) => setData(data))
+      getData().then((data) => setData(data))
     }, [])
+  
 return (
     <div>
         <h1>Fetch</h1>
@@ -26,6 +27,8 @@ return (
             
            
         </div>)}
+       
+       
     </div>
 )
 }
