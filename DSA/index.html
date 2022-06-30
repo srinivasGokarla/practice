@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <h1>List of products:</h1>
+    <p id="display"></p>
+     
+     <h1>List of getUniquePrducts:</h1>
+     <p id="demo"></p>
+    
+</body>
+<script>
+    const listOfProducts = [{
+    productName: "TV",
+    quantity: 10,
+    description: "television"
+  },
+  {
+    productName: "AC",
+    quantity: 5,
+    description: "air conditioner"
+  },
+  {
+    productName: "TV",
+    quantity: 10,
+    description: "television"
+  },
+  {
+    productName: "AC",
+    quantity: 5,
+    description: "air conditioner"
+  },
+  {
+    productName: "FAN",
+    quantity: 10,
+    description: "Ceiling Fan"
+  }
+];
+let b = {};
+
+ listOfProducts.forEach(el => {
+    b[el.productName] = (b[el.productName] || 0) + 1;
+})
+
+
+
+
+
+let sum = listOfProducts.reduce(function(acc, curr) {
+  let findIndex = acc.findIndex(item => item.productName === curr.productName);
+
+  if (findIndex === -1) {
+    acc.push(curr)
+  } else {
+
+    acc[findIndex].quantity += curr.quantity
+  }
+  return acc;
+}, [])
+
+
+var str = JSON.stringify(b);
+var res = JSON.stringify(sum);
+
+document.getElementById("display").innerHTML = str
+document.getElementById("demo").innerHTML = res
+
+
+
+console.log(sum)
+console.log(b)
+</script>
+</html>
