@@ -2,7 +2,7 @@ function runProgram(input) {
     input = input.trim().split("\n")
     var N = Number(input[0])
     var arr = input[1].trim().split(" ").map(Number)
-    //console.log(N,arr)
+    console.log(N,arr)
     var max = 0;
     for(var i = 0; i < arr.length; i++) {
         if(max < arr[i]) {
