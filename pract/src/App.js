@@ -5,11 +5,12 @@ import Counter from "./Components/Counter"
 import List from './Components/List';
 import{ Real} from './Components/Real';
 import Form from "./Components/Forms"
+import {CountDown} from "./Components/Toggle"
 function App() {
   return (
     <div className="App">
     
-   <Form/>
+   < CountDown/>
     </div>
   );
 }
