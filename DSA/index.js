@@ -34,7 +34,7 @@ function testing(list) {
             }
          
     });
-    //console.log(list.join(" "));
+     console.log(list.join(" "));
 
     function removeDuplicates(list) {
         return list.filter((item,
