@@ -4,10 +4,12 @@ var str = ["1","2","a","b","3","c","4","e","f","g","5","6"]
 //   });
 //   console.log(filtered);
 
-const arr = ['1', 'test', '3', 5];
-const validNumbers = arr.filter(Number);
+// const arr = ['1', 'test', '3', 5];
+// const validNumbers = arr.filter(Number);
 
-// 👇️ ['1', '3', 5]
-console.log(validNumbers.join(" "));
-const toNumbers = validNumbers.map(Number);
-console.log(toNumbers);
+// // 👇️ ['1', '3', 5]
+// console.log(validNumbers.join(" "));
+// const toNumbers = validNumbers.map(Number);
+// console.log(toNumbers);
+const res = str.filter(Number);
+console.log(res)
