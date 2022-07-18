@@ -7,12 +7,15 @@ import{ Real} from './Components/Real';
 import Form from "./Components/Forms"
 import {CountDown} from "./Components/Toggle";
 import Pract from "./Components/Pract"
+import DatePract from "./Components/DatePract"
 function App() {
   return (
     <div className="App">
-    
+   
+
    < CountDown/>
    <Pract/>
+   < DatePract/>
     </div>
   );
 }
