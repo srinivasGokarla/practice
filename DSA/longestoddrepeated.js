@@ -1,25 +1,28 @@
 
   function runProgram(input) {
     input = input.split("\n");
-   let str = input[0].trim().split("")
-  //console.log(str)
- let count = 1;
- let max = 1;
- for(let i = 0; i < str.length; i++) {
-    if(str[i] == str[i-1] ) {
-        count++
-        
-    } else {
-        max = Math.max(count, max);
-        count = 1
+  let N = Number(input[0])
+  let arr = input[1].trim().split(" ").map(Number)
+  let count = 1;
+  let ans = 1;
+  for(let i= 0; i < N; i++) {
+    if(arr[i] % 2 !== 0) {
+       // console.log(arr[i])
+        if(arr[i] === arr[i-1]) {
+            count++
+        } else {
+            ans = Math.max(count,ans);
+            count = 1
+        }
     }
-   
- }
- max = Math.max(count, max)
-console.log(max)
+    
+  }
+  ans = Math.max(count,ans)
+    console.log(ans)
 }
 if (process.env.USERNAME === 'srini') {
-  runProgram(`ATTCGGGA`);
+  runProgram(`12
+  1 1 1 1 2 2 2 2 2 1 1 1`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");
