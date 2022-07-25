@@ -9,7 +9,12 @@ import Parentstate from "./Components/Parentstate"
 import {Parent, Child} from "./Components/Parent";
 import  Sumof from "./Components/Sumof";
 import Counter from "./Components/Counter";
-import Fetch from "./Components/Fetch"
+import Fetch from "./Components/Fetch";
+import Time from "./Components/Time";
+import DigitalTime from "./Components/DigitalTime";
+import Handler from "./Components/Handler";
+import Input from "./Components/Input";
+import TwoInput from "./Components/TwoInput"
 
 
 
@@ -17,7 +22,12 @@ function App() {
   return (
     <div className="App">
      <Simple />
-   
+<hr />
+     <Time />
+     < DigitalTime />
+     < Handler />
+     <Input />
+     <TwoInput />
      <Users />
      < Toggle />
      <Bindding />

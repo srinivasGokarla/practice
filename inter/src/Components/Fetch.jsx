@@ -14,7 +14,7 @@ return (
     <div>
         <h1>Fetch</h1>
         {data?.map((item) =>
-        <div>
+        <div key={item._id}>
             <hr/>
             <p>Id:  {item._id}</p>
             <p>images:  {item.images}</p>
