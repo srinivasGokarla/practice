@@ -1,4 +1,5 @@
 function runProgram(input) {
+   
     var input = input.trim().split("\n");
     var[NzScore, NzSuperOver, NzFours] = input[0].trim().split(" ").map(Number);
     var[EngScore, EngSuperOver, EngFours] = input[1].trim().split(" ").map(Number);
