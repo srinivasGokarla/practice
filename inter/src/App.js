@@ -14,7 +14,8 @@ import Time from "./Components/Time";
 import DigitalTime from "./Components/DigitalTime";
 import Handler from "./Components/Handler";
 import Input from "./Components/Input";
-import TwoInput from "./Components/TwoInput"
+import TwoInput from "./Components/TwoInput";
+import SimpleForm from "./Components/SimpleForm"
 
 
 
@@ -28,6 +29,7 @@ function App() {
      < Handler />
      <Input />
      <TwoInput />
+     < SimpleForm />
      <Users />
      < Toggle />
      <Bindding />
