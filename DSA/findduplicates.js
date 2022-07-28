@@ -1,6 +1,4 @@
-
-
-    let arr = [ 1, 3, 2, 1 ];
+ let arr = [ 1, 3, 2, 1 ];
 
     let obj = {}
     for(let i= 0; i < arr.length; i++) {
