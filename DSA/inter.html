@@ -3,53 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .blue{
+            height: 500px;
+            width: 500px;
+            background-color: blue;
+            padding-left: 80px;
+            padding-top: 60px;
+        }
+        .red{
+            height: 400px;
+            width: 400px;
+            background-color: red; 
+            border-radius: 50%;
+            padding-top: 20px;
+        }
+        .num{
+  display: grid;
+  grid-template-columns: 30px 30px 30px;
+  grid-template-rows: 30px;
+  grid-gap: 30px;
+  margin-left: 120px;
+  
+
+        }
+
+        p{
+            background-color: rgb(244, 174, 33);   
+        }
+    </style>
 </head>
-<style>
-    .squar {
-    background: #385a94;
-    height:400px;
-    width:400px;
-    position: relative;
-    margin: auto;
-        
-    }
-    .cir{
-        position: absolute;
-   background: #a9aaab;
-   border-radius: 50%;
-   height: 300px;
-   width: 300px;
-   /*
-    Put top edge and left edge in the center
-   */
-   top: 50%;
-   left: 50%;
-   margin: -150px 0px 0px -150px;
-    }
-    .cir {
-        display: flex;
-    }
-    .squar .cir div {
-        flex: 1;
-  margin: 1%;
-    }
-
-</style>
 <body>
-    <div class="squar">
-        <div class="cir">
-           <div>1</div>
-           <div>2</div>
-           <div>3</div>
-           <div>4</div>
-           <div>5</div>
-           <div>6</div>
-
-        </div>
-       
+    <div class="blue">
+        <br>
+<div class="red">
+<div class="num">
+    <p></p>
+    <p></p>
+    <p></p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+</div>
+</div>
     </div>
-
 </body>
 </html>
