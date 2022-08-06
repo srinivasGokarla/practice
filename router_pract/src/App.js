@@ -4,7 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
-import Menu from "./Components/Menu"
+import Menu from "./Components/Menu";
+import Search from "./Components/Search"
 
 function App() {
   const Name =() => {
@@ -14,10 +15,11 @@ function App() {
     <div className="App">
       <h1>React Router</h1>
       <Menu />
-    <Routes>
+    <Routes >
      <Route  exact path="/" element={<About/>}/>
      <Route path="/contact" element={<Contact/>}/>
      <Route path="/contact/name" element={<Name/>}/>
+     <Route path="/search" element={<Search/>}/>
      <Route path="*" element={<Error/>}/>
      </Routes>
     
