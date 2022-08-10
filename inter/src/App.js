@@ -15,7 +15,8 @@ import DigitalTime from "./Components/DigitalTime";
 import Handler from "./Components/Handler";
 import Input from "./Components/Input";
 import TwoInput from "./Components/TwoInput";
-import SimpleForm from "./Components/SimpleForm"
+import SimpleForm from "./Components/SimpleForm";
+import TwoInputs from "./Components/TwoInputes"
 
 
 
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="App">
      <Simple />
+     < TwoInputs />
 <hr />
      <Time />
      < DigitalTime />
