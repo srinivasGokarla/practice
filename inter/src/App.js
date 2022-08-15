@@ -16,7 +16,8 @@ import Handler from "./Components/Handler";
 import Input from "./Components/Input";
 import TwoInput from "./Components/TwoInput";
 import SimpleForm from "./Components/SimpleForm";
-import TwoInputs from "./Components/TwoInputes"
+import TwoInputs from "./Components/TwoInputes";
+import Effect from "./Components/Effect"
 
 
 
@@ -42,6 +43,7 @@ function App() {
      </Parent>
      <Sumof />
      <Counter />
+     <Effect />
      <Fetch />
    
     
