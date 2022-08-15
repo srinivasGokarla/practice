@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 const TwoInputes = () => {
-    const[value, setValue] = useState("")
+    const[value, setValue] = useState(200)
 
   return (
     <div>
