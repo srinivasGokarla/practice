@@ -9,16 +9,18 @@ import {CountDown} from "./Components/Toggle";
 import Pract from "./Components/Pract"
 import DatePract from "./Components/DatePract";
 import ImageGallery from "./Components/Imagegallery";
-import Miniproject1 from  './Components/Miniproject1'
+import Miniproject1 from  './Components/Miniproject1';
+import Interview1 from "./Components/Interview1"
 function App() {
   return (
     <div className="App">
    
-   < Miniproject1 />
-   < CountDown/>
-   <Pract/>
-   < DatePract/>
-   < ImageGallery />
+  < Miniproject1 />
+  < CountDown/>
+  <Pract/>
+  < DatePract/>
+  < ImageGallery />
+   < Interview1 />
     </div>
   );
 }
