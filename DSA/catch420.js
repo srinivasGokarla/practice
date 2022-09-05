@@ -34,10 +34,5 @@ for(let i = 0; i < str.length; i++) {
         read = read.replace(/\n$/, "");
         runProgram(read);
       });
-      process.on("SIGINT", function () {
-        read = read.replace(/\n$/, "");
-        runProgram(read);
-        process.exit(0);
-      });
-    }
+     
     
