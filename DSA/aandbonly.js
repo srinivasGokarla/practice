@@ -4,15 +4,15 @@ function runProgram(input) {
     let arr = []
     //console.log(str)
     for(let i = 0; i < str.length; i++) {
-        if(i % 2 === 0) {
-            console.log(str[i])
-           
-            
-          
-        }
+    if(str[i] === "?" && str[i+1] === "b" || str[i] === "?" && str[i-1] === "b" || str[i] === "?" && str[i+3] === "b" || str[i] === "?" && str[i-3] === "b") {
+      str[i] = "a"
+    }else if(str[i] === "?" && str[i+1] === "a" || str[i] === "?" && str[i-1] === "a" || str[i] === "?" && str[i+3] === "a" || str[i] === "?" && str[i-3] === "a") {
+      str[i] = "b"
+    }
        
     }
-    console.log(str)
+    console.log(str.join(""))
+  
      }
     if (process.env.USERNAME === "srini") {
       runProgram(`?ba??b`);
@@ -28,4 +28,9 @@ function runProgram(input) {
         read = read.replace(/\n$/, "");
         runProgram(read);
       });
-    
+      process.on("SIGINT", function () {
+        read = read.replace(/\n$/, "");
+        runProgram(read);
+        process.exit(0);
+      });
+    }
