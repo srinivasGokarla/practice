@@ -4,7 +4,7 @@ function runProgram(input) {
     var arr = input[1].trim().split(" ").map(Number)
    // console.log(arr,n,k)
    var count = 0;
-   for(var i= 0; i < arr.length; i++) {
+   for(var i = 0; i < arr.length; i++) {
        for(var j = i+1; j < arr.length; j++) {
            if(arr[i] + arr[j] === k) {
                count++;
@@ -30,3 +30,9 @@ function runProgram(input) {
       read = read.replace(/\n$/, "");
       runProgram(read);
     });
+    process.on("SIGINT", function () {
+      read = read.replace(/\n$/, "");
+      runProgram(read);
+      process.exit(0);
+    });
+  }
