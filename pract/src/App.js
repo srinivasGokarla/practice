@@ -17,7 +17,7 @@ function App() {
    
   < Miniproject1 />
   < CountDown/>
-  <Pract/>
+  
   < DatePract/>
   < ImageGallery />
    < Interview1 />
