@@ -50,4 +50,9 @@ if (process.env.USERNAME === "srini") {
       read = read.replace(/\n$/, "");
       runProgram(read);
     });
-    
+    process.on("SIGINT", function () {
+      read = read.replace(/\n$/, "");
+      runProgram(read);
+      process.exit(0);
+    });
+  }
