@@ -15,7 +15,7 @@
     }
         
     }
-    console.log(res.join(" "))
+  //  console.log(res.join(" "))
 
     // function removeDuplicates(arr) {
     //     return arr.filter((item,
