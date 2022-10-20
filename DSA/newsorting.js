@@ -34,7 +34,7 @@ let arr = input[1].trim().split(" ").map(Number)
         }
     }
  
-    console.log(arr)
+  //  console.log(arr)
 }
 
       if (process.env.USERNAME === "srini") {
