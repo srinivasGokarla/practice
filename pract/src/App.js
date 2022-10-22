@@ -10,11 +10,12 @@ import Pract from "./Components/Pract"
 import DatePract from "./Components/DatePract";
 import ImageGallery from "./Components/Imagegallery";
 import Miniproject1 from  './Components/Miniproject1';
-import Interview1 from "./Components/Interview1"
+import Interview1 from "./Components/Interview1";
+import Restart from "./Components/Restart"
 function App() {
   return (
     <div className="App">
-   
+   <Restart />
   < Miniproject1 />
   < CountDown/>
   
