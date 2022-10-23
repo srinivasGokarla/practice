@@ -1,6 +1,9 @@
 import React,{useState} from 'react'
 
 const Restart = () => {
+  const name = "Srinivas Gokarla";
+  const now =  new Date().toLocaleDateString()
+  const time = new Date().toLocaleTimeString()
     const[data, setData] = useState(0);
     const[text, setText] = useState("")
 
@@ -14,6 +17,7 @@ const Restart = () => {
             setData(0)
         }
     } 
+    
    
     
 
@@ -29,6 +33,9 @@ const Restart = () => {
        onChange={(e) => setText(e.target.value)}
        value={text} />
        <button disabled={text.length < 1}>submit</button>
+       <h1>{`My Name is ${name}`}</h1>
+      <p>Date: {now}</p>
+      <p>Time: {time}</p>
     </div>
   )
 }
