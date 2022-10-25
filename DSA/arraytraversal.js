@@ -19,7 +19,7 @@ for(let i = 0; i < arr.length; i++) {
         c4++
     }
 }
-//console.log(c1,c2,c3,c4)
+console.log(c1,c2,c3,c4)
     }
     
     if (process.env.USERNAME === "srini") {
