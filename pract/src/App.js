@@ -12,7 +12,8 @@ import ImageGallery from "./Components/Imagegallery";
 import Miniproject1 from  './Components/Miniproject1';
 import Interview1 from "./Components/Interview1";
 import Restart from "./Components/Restart";
-import DigitalTime from "./Components/DigitalTime"
+import DigitalTime from "./Components/DigitalTime";
+import Parentstate from "./Components/Parentstate"
 function App() {
   return (
     <div className="App">
@@ -20,7 +21,7 @@ function App() {
   < Miniproject1 />
   < CountDown/>
   < DigitalTime />
-  
+  < Parentstate />
   < DatePract/>
   < ImageGallery />
    < Interview1 />
