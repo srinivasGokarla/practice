@@ -13,7 +13,7 @@ export default function Users() {
   return (
     <>
       <h2>User Details List</h2>
-      {/* <ol>{userList}</ol> */}
+      <ol>{userList}</ol>
     </>
   )
 }
