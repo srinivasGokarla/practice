@@ -9,7 +9,7 @@ function runProgram(input) {
             max = arr[i]
         }
     }
-    console.log(max)
+    
     }
     
     if (process.env.USERNAME === "srini") {
