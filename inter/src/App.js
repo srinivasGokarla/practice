@@ -17,7 +17,8 @@ import Input from "./Components/Input";
 import TwoInput from "./Components/TwoInput";
 import SimpleForm from "./Components/SimpleForm";
 import TwoInputs from "./Components/TwoInputes";
-import Effect from "./Components/Effect"
+import Effect from "./Components/Effect";
+import Shop from "./Components/Cart"
 
 
 
@@ -26,6 +27,7 @@ function App() {
     <div className="App">
      <Simple />
      < TwoInputs />
+     < Shop />
 <hr />
      <Time />
      < DigitalTime />
