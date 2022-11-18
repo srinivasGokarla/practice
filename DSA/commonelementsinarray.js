@@ -8,26 +8,34 @@
         let arr = input[line++].trim().split(" ").map(Number)
         let m = Number(input[line++])
         let arr1 = input[line++].trim().split(" ").map(Number)
-        //console.log(test,n,arr,m,arr1)
-      if( CommonElements(arr,arr1).length < 1) {
-          console.log("-1")
-      }else {
-          console.log( CommonElements(arr,arr1))
-      }
+       
+      CommonElements(arr,arr1)
     }
  
 }
 function CommonElements(arr,arr1) {
-    let ans = []
-    for(let i = 0; i < arr.length; i++){
-        for(let j = 0; j< arr1.length; j++) {
-            if(arr[i] === arr1[j]) {
-                ans .push(arr[i])
-            }
-        }
-       
-        }
+  arr.sort((a, b) => a - b)
+  arr1.sort((a, b) => a - b)
+  let common = [];                  
+  let i = 0, j = 0;                 
+  
+  while(i < arr.length && j < arr1.length) {
     
+    if(arr[i] == arr1[j]) {        
+      common.push(arr[i]);
+      i++;
+      j++;
+    } else if(arr[i] < arr1[j]) {  
+      i++;                        
+    } else {
+      j++;
+    }
+  }
+if(common.length < 1) {
+    console.log(-1)
+} else {
+    console.log(common.join(" "))
+}
 }
 if (process.env.USERNAME === 'srini') {
   runProgram(`2
