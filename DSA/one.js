@@ -1,6 +1,6 @@
 function runProgram(input) {
     input = input.trim().split("\n")
-    console.log(input)
+   // console.log(input)
   
     }
     
