@@ -1,14 +1,37 @@
 function runProgram(input) {
     input = input.trim().split("\n")
-   //console.log(input)
-  
+    var testcases = Number(input[0])
+    var line = 1;
+    for(var i = 0; i < testcases; i++) {
+        var n = Number(input[line++])
+       
+     if(Nick(n)  === true) {
+        console.log("Yes")
+     } else {
+        console.log("No")
+     }
     }
-    
+    }
+
+    function Nick(n) {
+        if (n == 1)
+        return true;
+    if (n == 0)
+        return false;
+    if (n % 20 == 0)
+        return  Nick(n / 20) ||  Nick(n / 10);
+    else if (n % 10 == 0)
+        return  Nick(n / 10);
+    return false;
+    }
+  
     if (process.env.USERNAME === "srini") {
-      runProgram(`3 2
-      1 2
-      3 4
-      5 6`);
+      runProgram(`5
+      1
+      2
+      10
+      25
+      200`);
     } else {
       process.stdin.resume();
       process.stdin.setEncoding("ascii");
@@ -27,4 +50,3 @@ function runProgram(input) {
         process.exit(0);
       });
     }
-    

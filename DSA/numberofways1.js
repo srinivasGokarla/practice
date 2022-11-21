@@ -1,22 +1,34 @@
 function runProgram(input) {
     input = input.trim().split("\n")
- let N = Number(input[0])
- console.log(NumberOfWays(N))
+ let test = Number(input[0])
+ let line = 1;
+ for(let i = 0; i < test;i++) {
+    let n = Number(input[line++])
+    console.log(countWays(n))
+ }
+ 
 
 }
-function NumberOfWays(N) {
-    if(N == 0 || N == 1)
-    return 1
-   else if(N == 2)
-    return 2
-    else {
-        return (NumberOfWays(N-1) + NumberOfWays(N-2) + NumberOfWays(N-3))
-    }
+function countWays(n)
+{
+    var DP = [];
+    DP.length = 10;
+    DP.fill(0);
+ 
+    DP[0] = DP[1]  = 1;DP[2] = 2
+    DP[3] = 3;DP[4] = 5;
+
+    for(var i = 5; i <= n; i++)
+        DP[i] = DP[i - 1] + DP[i - 2] +
+                DP[i - 5];
+ 
+    return DP[n];
 }
 
 
 if (process.env.USERNAME === "srini") {
-    runProgram(`5`);
+    runProgram(`1
+    5`);
 } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
