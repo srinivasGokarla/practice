@@ -8,7 +8,7 @@ function runProgram(input) {
      if(Nick(n)  === true) {
         console.log("Yes")
      } else {
-        console.log("No")
+      //  console.log("No")
      }
     }
     }
