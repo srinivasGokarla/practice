@@ -44,4 +44,5 @@ function getChange(x,y) {
   getChange(5, 0.99); //must return [1,0,0,0,0,4]
   getChange(3.14, 1.99); // must return [0,1,1,0,0,1]
   getChange(4, 3.14); // must return [1,0,1,1,1,0]
-  getChange(0.45, 0.34); // must return [1,0,1,0,0,0]*/
+  getChange(0.45, 0.34); // must return [1,0,1,0,0,0]
+  */
