@@ -21,7 +21,7 @@ function RightRotate(arr, n, k){
          // console.log((arr[i - k]));
         }
     }
-   console.log(ans.join(" "))
+  // console.log(ans.join(" "))
 }
  
 
