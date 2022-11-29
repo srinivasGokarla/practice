@@ -18,7 +18,7 @@ function runProgram(input){
             res2  = res2 + str2[i];
         }
     }
-   console.log(AnagramDetective(res1,res2));
+  // console.log(AnagramDetective(res1,res2));
    
 }
 
