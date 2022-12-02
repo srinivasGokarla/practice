@@ -6,28 +6,38 @@ function runProgram(input) {
     let n = Number(input[line++])
     let arr = input[line++].trim().split(" ").map(Number)
 
-   // console.log(StoneAge(arr,n))
-   StoneAge(arr,n)
-  //  if(StoneAge(arr,n) == true) {
-  //   console.log(100)
-  //  } else {
-  //   console.log(0)
-  //  }
+    //console.log(StoneAge(arr,n))
+   if(StoneAge(arr,n) === true) {
+  console.log(100)
+   } else {
+   console.log(0)
+   }
+ 
   }
 }
 function StoneAge(arr,n) {
-  let l = 0, r = n-1;
- 
-  var sum1 = arr[l], sum2 = arr[r];
-  while(l < r) {
-   
- // console.log(sum1,sum2)
-  if(sum1 == sum2) {
-    console.log("yes", sum1,sum2)
+  let sum =0, sum1 = 0
+  let arr1 = [], arr2 = []
+  for(let i= 0; i<arr.length-2; i++) {
+    sum = sum + arr[i]
+    arr1.push(sum)
+  } 
+  for(let i = arr.length-1; i> 0; i--) {
+    sum1 = sum1 + arr[i]
+    arr2.push(sum1)
+  } 
+//console.log(arr1,arr2)
+for(let j = 0; j < arr1.length; j++) {
+  for(let k = 0; k < arr2.length; k++) {
+    if(arr1[j] == arr2[k]) {
+     return true
+     } else {
+    return false
+     }
   }
 
-    
-      }
+}
+
 }
 if (process.env.USERNAME === 'srini') {
   runProgram(`2
