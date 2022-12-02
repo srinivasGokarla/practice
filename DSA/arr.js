@@ -5,7 +5,7 @@
 
  for(let i = 0; i < arr.length; i++) {
    if(i % 2 != 0) {
-    console.log(arr[i])
+   // console.log(arr[i])
       let temp = arr[i];
       arr[i] = arr[left]
       arr[left] = arr[right]
@@ -16,4 +16,4 @@
    }
  }
 
-// console.log(arr)
+ //console.log(arr)
