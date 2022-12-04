@@ -36,7 +36,7 @@ if(ans.length == 0) {
   console.log((ans[ans.length-1]))
 }
 
-console.log(arr1,arr2)
+//console.log(arr1,arr2)
 
 }
 if (process.env.USERNAME === 'srini') {
