@@ -32,7 +32,7 @@ function flip_matrix(mat) {
              }
          }
        for(var k = 0; k < mat.length; k++) {
-      // console.log(mat[k].join(" "));
+       console.log(mat[k].join(" "));
         }
 }
  
