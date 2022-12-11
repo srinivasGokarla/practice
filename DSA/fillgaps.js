@@ -19,5 +19,5 @@ var fillGaps = function (head) {
        }
        current = current.next
    }
-   return head
+  // return head
 };
