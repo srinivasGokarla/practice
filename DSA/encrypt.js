@@ -7,11 +7,22 @@ function runProgram(input) {
   }
 
   function encryptStr(str,k) {
-    for(let i = 0; i < str.length; i++) {
+let alphaArr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let alp = alphaArr.split("")
+let results = []
+for(let i = 0; i < str.length; i++) {
+    let index = alp.findIndex(letter => {
+        return (letter = str[i])
+    })
+    if(index >= 0) {
+        results.push(alp.slice(index + 13, index + 14)[0])
         
+    } else {
+        results.push(str[i])
     }
-
 }
+return results.join("")
+} 
   if (process.env.USERNAME === "srini") {
     runProgram(`All-convoYs-9-be:Alert1.
     4`);
