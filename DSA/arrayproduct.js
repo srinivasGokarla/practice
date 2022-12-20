@@ -32,7 +32,7 @@ function runProgram(input){
             }
         }
     }
-    console.log(count);
+    //console.log(count);
 }
 
 if (process.env.USERNAME === "srini") {
