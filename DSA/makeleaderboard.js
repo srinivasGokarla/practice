@@ -1,66 +1,63 @@
-// function checkStrings(String a,String b){
-//     n = a.length()
-//     m = b.length()
-//    for(i = 0;i<minimum(n,m);i++){
-//            if (a[i] != b[i]){
-//                    if (a[i] > b[i]) return true
-//                    return false
-//            }
-//    }
-//    return false
-// }
 
-// function sortNames(names,marks,n){
 
-// for (i = 0; i<n; i++){
-//        for (j = 0; j < n-i-1; j++){
-//                if (checkStrings(names[j],names[j+1]) == true) swap(names,marks,j,j+1)
-//        }
-// }
-// }
 
-// function sortMarks(names,marks){
+function sortMarks(marks){
 
-// for (i = 0;i<n;i++){
-//        for (j = 0;j<n-i-1;j++){
-//                if (marks[j] < marks[j + 1]) swap(names,marks,j,j+1)
-//        }
-// }
-// }
+for (i = marks.length-1; i> 0; i--){
+       for (j = 0; j < i; j++){
+               if (marks[j][1] < marks[j+1][1]) {
+                let temp = marks[j]
+                marks[j] = marks[j+1]
+                marks[j+1] = temp
+               }
+       }
+}
+}
+function sortNames(names){
+    n = names.length
+    for (i = 0; i<n; i++){
+           for (j = 0; j < n-i-1; j++){
+                   if (names[j][0] > names[j+1][0]) {
+                    temp = names[j]
+                    names[j] = names[j+1]
+                    names[j+1] = temp
+                   }
+           }
+    }
+    }
 
-// function printRankList(names,marks){
-// count = 0
-// rank = 1
-// previous = -1
-// n = names.length
-// for (i = 0;i<n;i++){
-//        if (marks[i] == previous){
-//                    print (rank,names[i])
-//        }else{
-//                rank += count
-//                count = 0
-//                print (rank,names[i])
-//        }
-//        count++
-//        previous = names[i]
-// }
-//  }
+function printRankList(rank){
+var start = 1;
+rank[0][0] = start + " " + rank[0][0];
+console.log(rank[0][0])
+for(let i = 1; i < rank.length; i++) {
+    if(rank[i-1][1] != rank[i][1]) {
+        start = i+1;
+    }    
+    rank[i][0] = start + " " + rank[i][0]
+    console.log(rank[i][0])
+}
+ }
+
 function runProgram(input) {
     input = input.trim().split("\n")
     let n = Number(input[0])
     let line = 1
+    let resArr = []
     for(let i = 0; i < n; i++) {
-        let[names, marks] = input[line++].trim().split(" ")
-      // console.log(names)
-     
+        var [names, marks] = input[line++].trim().split(" ")
+      
+     var marks = Number(marks)
+     // console.log(names,marks)
+     arr = [names,marks]
+     resArr.push(arr)
     }
+    sortNames(resArr)
+    sortMarks(resArr)
+    printRankList(resArr)
 
 }
-function checking(marks,names) {
-    for(let i = 0; i < marks.length; i++) {
-        console.log(marks[1])
-    }
-}
+
     
     if (process.env.USERNAME === "srini") {
       runProgram(`6
