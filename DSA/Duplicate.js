@@ -17,7 +17,7 @@ function runProgram(input){
             ans.push(k)
         }
     }
-    //console.log(ans[0])
+    console.log(ans[0])
   
 }
 
