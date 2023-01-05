@@ -5,7 +5,7 @@ function runProgram(input) {
  let mat = []
  for(let i = 0; i < N; i++) {
     let arr = input[line++].trim().split(" ").map(Number)
-   // console.log(arr,N)
+    console.log(arr,N)
    mat.push(arr)
   
  }
