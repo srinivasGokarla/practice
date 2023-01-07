@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>masai home</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+    main{
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emojif;
+}
+
+main .masai-statics{
+display: grid;
+grid-template-columns: 2fr 2fr;
+grid-gap: 30px;
+text-align: center;
+color: white;
+}
+
+.placement-rate{
+    width: 100%;
+    margin: auto;
+    background-color: #007aff;
+    height: 250px;
+    border-radius: 16px;
+}
+.placement-rate h2{
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.placement-rate .sunshine{
+    width: 42px;
+    margin-left: -458px;
+    margin-bottom: -60px;
+}
+
+.placement-rate .underline{
+    margin-left: -281px;
+}
+
+.placement-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.placement-bottom div:nth-child(1){
+background-color:rgba(66, 153, 225, 0.6); 
+width: 80%;
+border-radius: 16px;
+display: flex;
+align-items: center;
+height: 250px;
+font-size: 30px;
+justify-content: center;
+}
+
+.placement-bottom div:nth-child(2){
+ background-color:#70cfa0;
+ width: 80%;
+ height: 250px;
+ border-radius: 16px;
+ display: flex;
+align-items: center;
+font-size: 30px;
+justify-content: center;
+}
+
+.right-statics{
+    background-color: rgba(110,113,204);
+    border-radius: 16px;
+}
+.right-statics h2{
+    font-size: 38px;
+}
+
+.right-statics button{
+  width: 120px;
+  height: 35px;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.yellow-color{
+    color:  rgba(255,219,102);
+}
+
+.skill-cards .skill-heading{
+text-align: center;
+}
+
+.skill-heading h2{
+    font-size: 38px;
+    line-height: 16px;
+}
+
+.skill-heading p{
+    font-weight: 500;
+}
+
+.skill-cards .cards-section{
+display: flex;
+width: 70%;
+justify-content: space-between;
+margin: auto;
+}
+.skill-cards .cards-section .left-card .top-color{
+    width: 100%;
+height: 100px;
+background-color: rgba(110,113,204);
+}
+.skill-cards .cards-section .right-card .top-color{
+    width: 100%;
+height: 100px;
+background-color: #70cfa0;
+}
+
+.left-card,.right-card{
+width: 400px;
+border: 1px solid rgb(231, 230, 230);
+border-radius: 16px;
+overflow: hidden;
+text-align: center;
+}
+
+.left-card .dp, .right-card .dp{
+    display: flex;
+    justify-content: center;
+}
+
+.left-card .dp img, .right-card .dp img{
+ width: 210px;
+ border-radius: 50%;
+ border: 5px solid white;
+ margin-top: -50px;
+}
+
+.left-card .underline, .right-card .underline{
+    margin-top: -39px;
+}
+.left-card .practice, .right-card .practice{
+    line-height: 0px;
+}
+.left-card .requirments, .right-card .practice{
+    display: flex;
+    justify-content: space-evenly;
+}
+.left-card .requirments p, .right-card .requirments p{
+    font-size: 12px;
+   font-weight: 500;
+   line-height: 0px;
+}
+.left-card .requirments div,.right-card .requirments div{
+    padding: 0px 10px;
+    background-color: #F2F6FF;
+   color:rgba(52,112,228);
+   border-radius: 15px;
+}
+.left-card .icons-para-wrapper, .right-card .icons-para-wrapper{
+    display: flex;
+line-height: 10px;
+}
+.left-card .icons-para-wrapper img, .right-card .icons-para-wrapper img{
+    width: 15px;
+    height: 15px;
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-right: 10px;
+   
+}
+.left-card .icons-para-wrapper p, .right-card .icons-para-wrapper p{
+    font-weight: 700;
+    font-size: 16px;
+}
+.color-blue{
+   color: rgba(52,112,228);
+}
+.left-card .bottom-red, .right-card .bottom-red{
+    background-color: #E53E3E;
+    height: 60px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.scholar-preleaf{
+    background-color: rgb(251, 238, 220);
+    text-align: center;
+    border-radius: 18px;
+}
+
+.scholar-preleaf .logos img{
+    width: 250px;
+}
+.scholar-preleaf h2{
+    font-size: 35px;
+}
+.scholar-preleaf p{
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.color-purple{
+    color: rgba(110,113,204);
+}
+.scholar-preleaf button{
+    background: white;
+    color:#ED0331;
+    border: 1px solid #ED0331;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 8px;
+} 
+
+.scholar-preleaf button:hover{
+background-color: #FEDFE5;
+}
+.scholar-preleaf .last-line{
+    color: gray;
+}
+.start-learning .btn-red-wrap{
+    display: flex;
+    justify-content: center;
+}
+.start-learning .learning-btn{
+    color: white;
+    background-color:#ED0331;
+    border: none;
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+}
+.start-learning{
+    text-align: center;
+}
+.start-learning .instructors-cards{
+display: grid;
+grid-template-columns:1fr 1fr 1fr 1fr;
+grid-gap:30px;
+}
+
+.start-learning .instructors-cards .card{
+    width: 270px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.start-learning .instructors-cards .card img{
+    width: 100%;
+}
+.start-learning .instructors-cards .ex-wrap{
+display: flex;
+justify-content: center;
+}
+
+.start-learning .instructors-cards .ex-wrap img{
+    width: 100px;
+    }
+    .student-stories{
+        text-align: center;
+    }
+ .student-stories h2{
+    font-size: 35px;
+ }   
+ .student-stories  .students-cards{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-gap:30px;
+ }
+
+ .student-stories  .students-cards .card{
+    width: 270px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ .student-stories  .students-cards .card img{
+    width: 100%;
+}
+
+.student-stories  .students-cards .student-desc{
+    margin-top:-20px ;
+ background-color: #cee9db;
+ padding-top: 20px;
+}
+
+.student-stories  .students-cards .student-desc img{
+    width: 80px;
+}
+
+.student-stories .learning-btn{
+    color: white;
+    background-color:#ED0331;
+    border: none;
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+}
+.company-review{
+    text-align: center;
+}
+.company-review .company-card{
+width: 250px;
+background-color: rgb(247, 247, 255);
+border-radius: 16px;
+margin: 10px;
+padding-left: 20px;
+}
+.company-review .company-card .profile{
+display: flex;
+
+}
+.company-review .company-card .profile .dp{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 10px;
+    
+    }
+
+    .company-review .company-card .logo{
+        width: 50px;
+        }
+</style>
+<body>
+    <main>
+        <section class="masai-statics"> 
+            <div class="left-statics">
+                <div class="placement-rate">
+                    <img class="sunshine" src="https://www.masaischool.com/img/homepage/sunshine.png" alt="">
+                    <h2> <span class="yellow-color">6000+</span> Students Currently <br>
+
+                        Enrolled <br>
+                        
+                     <span class="yellow-color">94%</span> Placement Rate*</h2>
+                     <img  class="underline" src="https://www.masaischool.com/img/homepage/underline.svg" alt="">
+                        <h4>*for students who have graduated from Masai School and are Masai accredited</h4>
+
+                </div>
+            <div class="placement-bottom">
+                <div>
+                    <h2>₹7.2 LPA <br> Average <br>
+                        Salary</h2>
+                </div>
+                <div>
+                    <h2>₹36 LPA <br> Highest <br>Salary</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-statics">
+            <div>
+                <img src="https://www.masaischool.com/img/homepage/media.png" alt="">
+            </div>
+            <h2>Masai In The News</h2>
+            <button>KNOW MORE</button>
+        </div>
+        </section>
+
+        <br>
+
+        <section class="skill-cards">
+            <div class="skill-heading">
+<h2>Skill. Reskill. Upskill.</h2>
+<p>No matter the stage of your career, if growth in India’s tech industry is your desired outcome, we got you covered!</p>
+</div>
+     <div class="cards-section">
+        <div class="left-card">
+            <div class="top-color">
+            </div>
+            <div class="dp">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Downloader_1_c382f15ecf.png" alt="">
+            </div>
+            <h3>Masai 0NE</h3>
+            <p class="practice">&lt;Learn. Practice. Grow&gt;</p>
+             <img  class="underline" src="https://www.masaischool.com/img/homepage/underline.svg" alt="">
+            <div class="requirments">
+                <div>
+                <p>12TH PASS</p>
+            </div>
+            <div>
+                <p>FINAL YEAR STUDENTS OR GRADUATES</p>
+            </div>
+            </div>
+            <div class="icons-para-wrapper">
+                <img src="https://findicons.com/files/icons/2770/ios_7_icons/512/student.png" alt="">
+                <p>Data Analytics | Software Development</p>
+            </div>
+            <div class="icons-para-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/512/3077/3077218.png" alt="">
+                <p>No Prior Technical Knowledge Needed</p>
+            </div>
+            <div class="icons-para-wrapper">
+                <img src="https://im.indiatimes.in/content/2020/Jul/indian-currency-389006_1920_5f1547587ee6e.jpg?w=640&h=480&cc=1" alt="">
+                <p>Pay After Placement of <span class="color-blue">5 LPA or Above</span></p>
+            </div>
+    
+            <div class="bottom-red">
+                VIEW COURSES
+            </div>
+          </div>
+
+     
+          <div class="right-card">
+            <div class="top-color">
+            </div>
+            <div class="dp">
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Downloader_45493fc392.png" alt="">
+            </div>
+            <h3>Masai X</h3>
+            <p class="practice">&lt;Learn. Practice. Grow&gt;</p>
+             <img  class="underline" src="https://www.masaischool.com/img/homepage/underline.svg" alt="">
+            <div class="requirments">
+            <div>
+                <p>FOR WORKING PROFESSIONALS</p>
+            </div>
+            </div>
+            <div class="icons-para-wrapper">
+                <img src="https://findicons.com/files/icons/2770/ios_7_icons/512/student.png" alt="">
+                <p>Data Analytics | Software Development</p>
+            </div>
+            <div class="icons-para-wrapper">
+                <img src="https://im.indiatimes.in/content/2020/Jul/indian-currency-389006_1920_5f1547587ee6e.jpg?w=640&h=480&cc=1" alt="">
+                <p>Level 1: Pay After You Earn <span class="color-blue">5 LPA or Above</span></p>
+            </div>
+            <div class="icons-para-wrapper">
+                <img src="https://im.indiatimes.in/content/2020/Jul/indian-currency-389006_1920_5f1547587ee6e.jpg?w=640&h=480&cc=1" alt="">
+                <p>Level 2: Pay After You Earn <span class="color-blue">10 LPA or Above</span></p>
+            </div>
+    
+            <div class="bottom-red">
+                VIEW COURSES
+            </div>
+          </div>
+ </div>
+</section>
+<br>
+<section class="scholar-preleaf">
+    <br>
+    <div class="logos">
+        <img src="https://www.masaischool.com/img/masai-prepleaf/masai-prepleaf-logo.svg" alt="">
+    </div>
+<h2>Scholar programs by Prepleaf</h2>
+<p>Masai acquired Prepleaf in 2021 to expand their placement preparation portal as a go-to no cost resource for college students. Since, the 2 companies have offered a Data Analytics course with a Pay After Placement model. The Scholar Program comes as India’s first subscription based foundational learning course
+    for <br>
+     <span class="color-purple">1st, 2nd & pre-final year students.</span></p>
+     <button>VIEW COURSES</button>
+     <p class="last-line">You can avail scholarship upto 75%.</p>
+     <br>
+</section>
+<br>
+<section class="start-learning">
+    <div class="btn-red-wrap">
+<button class="learning-btn">START LEARNING</button>
+</div>
+<br><br><br>
+<h2>Meet Your Instructors</h2>
+<p>With extensive industry experience, the Masai Curriculum Team is a group of expert instructors.</p>
+<div class="instructors-cards">
+    <div class="card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Nrupul_d3fe3b289a.jpg" alt="">
+        <div>
+           <p>Nrupul Dev</p>
+           <p>Co Founder & CTO</p>
+           <hr>
+           <div class="ex-wrap">
+            <img class="ex" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_da_557255e025.jpeg" alt="">
+           </div>
+           <br>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Yogesh_52e31f5560.jpg" alt="">
+        <div>
+           <p>Yogesh bhatt</p>
+           <p>Co Founder & CTO</p>
+           <hr>
+           <div class="ex-wrap">
+            <img class="ex" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_mercuri_129d690457.svg" alt="">
+           </div>
+           <br>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/aman_fbbc8625a4.jpg" alt="">
+        <div>
+           <p>Nrupul Dev</p>
+           <p>Co Founder & CTO</p>
+           <hr>
+           <div class="ex-wrap">
+            <img class="ex" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_exl_ab21e9bfe0.png" alt="">
+           </div>
+           <br>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Albert_28b73517f6.jpg" alt="">
+        <div>
+           <p>Nrupul Dev</p>
+           <p>Co Founder & CTO</p>
+           <hr>
+           <div class="ex-wrap">
+            <img class="ex" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_realized_5d3fee2677.jpeg" alt="">
+           </div>
+           <br>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/lohit_dp_98abd5839c.jpeg" alt="">
+        <div>
+           <p>Nrupul Dev</p>
+           <p>Co Founder & CTO</p>
+           <hr>
+           <div class="ex-wrap">
+            <img class="ex" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_microsoft_80272817c6.png" alt="">
+           </div>
+           <br>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Ritesh_Firodiya_4_8a667ac9c8.jpg" alt="">
+        <div>
+           <p>Nrupul Dev</p>
+           <p>Co Founder & CTO</p>
+           <hr>
+           <div class="ex-wrap">
+            <img class="ex" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ex_swiggy_9ca86a3f78.svg" alt="">
+           </div>
+           <br>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/swanand_d399feddf5.jpeg" alt="">
+        <div>
+           <p>Nrupul Dev</p>
+           <p>Co Founder & CTO</p>
+           <hr>
+           <div class="ex-wrap">
+            <img class="ex" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/kalaam_f2ea778a36.png" alt="">
+           </div>
+           <br>
+        </div>
+    </div>
+</div>
+<br>
+<div class="btn-red-wrap">
+    <button class="learning-btn">SEE MORE</button>
+    </div>
+</section>
+
+<section class="student-stories">
+    <br><br><br>
+    <h2>Thousands Trust Masai To <br> Launch Their Career</h2>
+   <div class="students-cards">
+    <div class="card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Aayushi_527cd1c2a3.jpg" alt="">
+        <div class="student-desc">
+           <p>I got placed within 2 days after graduation! I’m happy I am part of the Masai family, not because they helped me but because of their mission to help other lost</p>
+           <div class="ex-wrap">
+            <p>Aayushi Shah</p>
+            <img class="ex" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/sharechat_rect_73d95cd4e1.svg" alt="">
+           </div>
+           <br>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Kritika_Tripathi_716c47cbbd.jpg" alt="">
+        <div class="student-desc">
+           <p>I got placed within 2 days after graduation! I’m happy I am part of the Masai family, not because they helped me but because of their mission to help other lost</p>
+           <div class="ex-wrap">
+            <p>Aayushi Shah</p>
+            <img class="ex" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png" alt="">
+           </div>
+           <br>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Lokesh_Nimje_90cfa775e3.jpg" alt="">
+        <div class="student-desc">
+           <p>I got placed within 2 days after graduation! I’m happy I am part of the Masai family, not because they helped me but because of their mission to help other lost</p>
+           <div class="ex-wrap">
+            <p>Aayushi Shah</p>
+            <img class="ex" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/MPL_7713ca3d5b.svg" alt="">
+           </div>
+           <br>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Lalitha_9c1e4f1cab.jpg" alt="">
+        <div class="student-desc">
+           <p>I got placed within 2 days after graduation! I’m happy I am part of the Masai family, not because they helped me but because of their mission to help other lost</p>
+           <div class="ex-wrap">
+            <p>Aayushi Shah</p>
+            <img class="ex" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Ajio_2ba59d62cb.svg" alt="">
+           </div>
+           <br>
+        </div>
+    </div>
+   </div>
+   <br>
+   <div class="btn-red-wrap">
+    <button class="learning-btn">MORE STORIES</button>
+    </div>
+</section>
+
+<section class="company-review">
+    <h2>What companies are saying about our students</h2>    <div class="silder">
+<div class="company-card">
+<div>
+    <br>
+<img src="https://www.masaischool.com/img/linkedin.svg" alt="">
+<p>Masai brought discipline to my life, helped me develop a coder’s mindset and increase my concentration as well as time management skills. It took me</p>
+</div>
+<div class="profile">
+    <img class="dp" src="https://www.masaischool.com/img/hire-masai-grads/Anirban_Majumdar.jpeg" alt="">
+    <div> 
+           <p>Aribindin</p>
+        
+    </div>
+</div>
+
+<img class="logo" src="https://www.masaischool.com/img/hire-masai-grads/urbanpiper.svg" alt="">
+</div>
+<div class="company-card">
+    <div>
+        <br>
+    <img src="https://www.masaischool.com/img/linkedin.svg" alt="">
+    <p>Masai brought discipline to my life, helped me develop a coder’s mindset and increase my concentration as well as time management skills. It took me</p>
+    </div>
+    <div class="profile">
+        <img class="dp" src="https://www.masaischool.com/img/hire-masai-grads/Anirban_Majumdar.jpeg" alt="">
+        <div> 
+               <p>Aribindin</p>
+            
+        </div>
+    </div>
+    
+    <img class="logo" src="https://www.masaischool.com/img/hire-masai-grads/urbanpiper.svg" alt="">
+    </div>
+    <div class="company-card">
+        <div>
+            <br>
+        <img src="https://www.masaischool.com/img/linkedin.svg" alt="">
+        <p>Masai brought discipline to my life, helped me develop a coder’s mindset and increase my concentration as well as time management skills. It took me</p>
+        </div>
+        <div class="profile">
+            <img class="dp" src="https://www.masaischool.com/img/hire-masai-grads/Anirban_Majumdar.jpeg" alt="">
+            <div> 
+                   <p>Aribindin</p>
+                
+            </div>
+        </div>
+        
+        <img class="logo" src="https://www.masaischool.com/img/hire-masai-grads/urbanpiper.svg" alt="">
+        </div>
+        <div class="company-card">
+            <div>
+                <br>
+            <img src="https://www.masaischool.com/img/linkedin.svg" alt="">
+            <p>Masai brought discipline to my life, helped me develop a coder’s mindset and increase my concentration as well as time management skills. It took me</p>
+            </div>
+            <div class="profile">
+                <img class="dp" src="https://www.masaischool.com/img/hire-masai-grads/Anirban_Majumdar.jpeg" alt="">
+                <div> 
+                       <p>Aribindin</p>
+                    
+                </div>
+            </div>
+            
+            <img class="logo" src="https://www.masaischool.com/img/hire-masai-grads/urbanpiper.svg" alt="">
+            </div>
+            <div class="company-card">
+                <div>
+                    <br>
+                <img src="https://www.masaischool.com/img/linkedin.svg" alt="">
+                <p>Masai brought discipline to my life, helped me develop a coder’s mindset and increase my concentration as well as time management skills. It took me</p>
+                </div>
+                <div class="profile">
+                    <img class="dp" src="https://www.masaischool.com/img/hire-masai-grads/Anirban_Majumdar.jpeg" alt="">
+                    <div> 
+                           <p>Aribindin</p>
+                        
+                    </div>
+                </div>
+                
+                <img class="logo" src="https://www.masaischool.com/img/hire-masai-grads/urbanpiper.svg" alt="">
+                </div>
+                <div class="company-card">
+                    <div>
+                        <br>
+                    <img src="https://www.masaischool.com/img/linkedin.svg" alt="">
+                    <p>Masai brought discipline to my life, helped me develop a coder’s mindset and increase my concentration as well as time management skills. It took me</p>
+                    </div>
+                    <div class="profile">
+                        <img class="dp" src="https://www.masaischool.com/img/hire-masai-grads/Anirban_Majumdar.jpeg" alt="">
+                        <div> 
+                               <p>Aribindin</p>
+                            
+                        </div>
+                    </div>
+                    
+                    <img class="logo" src="https://www.masaischool.com/img/hire-masai-grads/urbanpiper.svg" alt="">
+                    </div>
+                    <div class="company-card">
+                        <div>
+                            <br>
+                        <img src="https://www.masaischool.com/img/linkedin.svg" alt="">
+                        <p>Masai brought discipline to my life, helped me develop a coder’s mindset and increase my concentration as well as time management skills. It took me</p>
+                        </div>
+                        <div class="profile">
+                            <img class="dp" src="https://www.masaischool.com/img/hire-masai-grads/Anirban_Majumdar.jpeg" alt="">
+                            <div> 
+                                   <p>Aribindin</p>
+                                
+                            </div>
+                        </div>
+                        
+                        <img class="logo" src="https://www.masaischool.com/img/hire-masai-grads/urbanpiper.svg" alt="">
+                        </div>
+                    </div>
+</section>
+    </main>
+</body>
+<script>
+   	$('.silder').slick({
+        dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows:true
+});
+</script>
+</html>
