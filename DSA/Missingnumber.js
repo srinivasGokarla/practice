@@ -19,7 +19,7 @@ let minEven = Number.MAX_VALUE;
 
  reqSum = evenSumMax - evenSumMin + minEven;
  
- console.log(reqSum - sumEvenArr);
+ //console.log(reqSum - sumEvenArr);
 
 
 
