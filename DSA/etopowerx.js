@@ -1,13 +1,5 @@
 
-    //  * x //value of x in the expression
-    //  * n //value of power in the function
-    //  * r = n
-    //  * function rec(x,r)
-    //      * if (r==0) return 1
-    //      * val = Power(x,r) //function returns the power of the funtion
-    //      * ans = val/factorial(r) + rec(x,r-1) // factorial funtion returns the factorial of a number
-    //      * return ans
-    //  * print (ans)
+
     
     function runProgram(input) {
         input = input.trim().split(" ")
@@ -17,49 +9,30 @@
         let a = etopower(x, n)
       console.log(a.toFixed(4))
       }
-      function etopower(x, r)
-      {
-         f=1
-          if (r == 0)
-              return 1;
-       
-          // Recursive call
-          let val = Math.pow(x,r)
-          
-    // Recursive call
-    recur = etopower(x, r - 1);
- 
 
- 
-    // Factorial
-    f = f * r;
- ans = ((val/factorialize(r)) +  recur)
- return ans
+      function etopower(x, r) {
+        if(r == 0)
+        return 1
+        val = Math.pow(x,r)
+        ans = val/factorialize(r) + etopower(x, r-1)
+       return ans
+
       }
+
       function factorialize(r) {
-        var result = r;
-        if (r === 0 || r === 1) 
-          return 1; 
-        while (r > 1) { 
-          r--;
-          result *= r;
+        if(r <= 0){
+            return 
+        } else if(r === 1) {
+            return 1
+        } else {
+            return (factorialize(r-1) * (r))
         }
-        return result;
+    
       }
-      function recursion(n)
-{
-   // Stop condition
-   if(n == 0 || n == 1)
-     return 1;
-      
-   // Recursive condition
-   else
-      return n*recursion(n-1);
-}
-      
+
       
       if (process.env.USERNAME === "srini") {
-        runProgram(`1 1`);
+        runProgram(`4 2`);
       } else {
         process.stdin.resume();
         process.stdin.setEncoding("ascii");
