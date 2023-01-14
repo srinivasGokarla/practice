@@ -2,7 +2,7 @@ function runProgram(input) {
     input = input.trim().split("\n")
     let[n,m] = input[0].trim().split(" ").map(Number)
     let arr = input[1].trim().split(" ").map(Number)
- 
+ console.log(arr)
 }
         
         if (process.env.USERNAME === "srini") {
