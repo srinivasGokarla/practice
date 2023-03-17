@@ -16,7 +16,8 @@ function runProgram(input) {
                 }
             }
         }
-    }console.log(arr1.join(""));
+    }
+    console.log(arr1.join(""));
 
 }
   if (process.env.USERNAME === "srini") {
