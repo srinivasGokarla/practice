@@ -1,22 +1,19 @@
 function runProgram(input) {
-    input = input.trim().split("\n")
-let N = Number(input[0])
-let arr = input[1].trim().split(" ").map(Number).sort((a,b) => a-b)
-let ans = 0;
-for(let i = N-1; i >= 0; i--) {
-  if((i+arr[i]) <= N) {
-    arr[i] = arr[i] + arr[i+arr[i]]
-    console.log(ans, arr[i])
-    ans = Math.max(ans,arr[i])
-  }
-}
-console.log(ans)
-
- }
- 
+     input = input.trim().split("\n");
+     let[x1, v1, x2, v2] = input[0].trim().split(" ").map(Number)
+    // console.log(x1, v1, x2, v2)
+    if(v1 < v2) {
+        console.log("NO") ;
+      }
+      if((x2 - x1) % (v2 -v1) == 0) {
+        console.log("YES");
+      } else {
+        console.log("NO");
+      }
+    }
+    
     if (process.env.USERNAME === "srini") {
-      runProgram(`5
-      7 3 1 2 3`);
+      runProgram(`0 3 4 2`);
     } else {
       process.stdin.resume();
       process.stdin.setEncoding("ascii");
@@ -35,4 +32,3 @@ console.log(ans)
         process.exit(0);
       });
     }
-    
