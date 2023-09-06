@@ -11,7 +11,7 @@ function runProgram(input) {
     }
        
     }
-    console.log(str.join(""))
+  //  console.log(str.join(""))
   
      }
     if (process.env.USERNAME === "srini") {

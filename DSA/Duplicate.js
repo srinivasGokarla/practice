@@ -1,7 +1,7 @@
 function runProgram(input){
     input = input.split("\n");
     let str = input[0].trim().split("")
-    //console.log(str)
+    console.log(str)
     let obj = {}
     let ans = []
     for(let i= 0; i < str.length; i++) {
