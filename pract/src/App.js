@@ -13,11 +13,12 @@ import Miniproject1 from  './Components/Miniproject1';
 import Interview1 from "./Components/Interview1";
 import Restart from "./Components/Restart";
 import DigitalTime from "./Components/DigitalTime";
-import Parentstate from "./Components/Parentstate"
+import Parentstate from "./Components/Parentstate";
+
 function App() {
   return (
-    <div className="App">
-   <Restart />
+    <>
+  
   < Miniproject1 />
   < CountDown/>
   < DigitalTime />
@@ -25,7 +26,15 @@ function App() {
   < DatePract/>
   < ImageGallery />
    < Interview1 />
-    </div>
+   {/* <Fetch /> */}
+   < Form/>
+   < List />
+   <Pract/>
+   <Real/>
+   <Restart />
+   {/* <Test/> */}
+   
+    </>
   );
 }
 

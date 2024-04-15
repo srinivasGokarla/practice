@@ -18,7 +18,8 @@ import TwoInput from "./Components/TwoInput";
 import SimpleForm from "./Components/SimpleForm";
 import TwoInputs from "./Components/TwoInputes";
 import Effect from "./Components/Effect";
-import Shop from "./Components/Cart"
+import Shop from "./Components/Cart";
+import Search from "./Components/Search"
 
 
 
@@ -26,6 +27,7 @@ function App() {
   return (
     <div className="App">
      <Simple />
+     < Search />
      < TwoInputs />
      < Shop />
 <hr />

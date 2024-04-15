@@ -3,11 +3,12 @@ import React, {useState, useEffect} from 'react'
 export default function Fetch() {
     const[data, setData] = useState(null);
     const getData = () => 
-      fetch("https://snapdeal-backend.herokuapp.com/men")
+      fetch("https://api.spacexdata.com/v5/launches/latest")
       .then((res)=> res.json())
     
     useEffect(() => {
-      getData().then((data) => setData(data))
+      getData().then((data) => //setData(data))
+      console.log(data))
     }, [])
   
 return (

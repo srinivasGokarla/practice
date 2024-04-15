@@ -4,29 +4,26 @@ import React, {useState,useEffect} from "react"
 const Fetch = () => {
     const[data, setData] = useState(null);
     const getData = () => 
-      fetch("https://snapdeal-backend.herokuapp.com/men")
+      fetch("https://api.spacexdata.com/v5/launches/")
       .then((res)=> res.json())
     
     useEffect(() => {
-      getData().then((data) => setData(data))
+      getData().then((data) => 
+      setData(data))
+     // console.log(data))
     }, [])
   
 return (
     <div>
-        <h1>Fetch</h1>
-        {data?.map((item) =>
+
+         <h1>Fetch</h1>
+         {data?.map((item) =>
         <div>
-            <hr/>
-            <p>Id:  {item._id}</p>
-            <p>images:  {item.images}</p>
-            <p> original_price:  {item.original_price}</p>
-            <p> sizes: {item.sizes.join(" ")}</p>
-            <p> rating: {item.rating}</p>
-            <p> title: {item.title}</p>
            
-            
+<img src={item.links.flickr.original[0] } alt="" style={{width: "20%"}} />
+        
            
-        </div>)}
+        </div>)} 
        
        
     </div>
