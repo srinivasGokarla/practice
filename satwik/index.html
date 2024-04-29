@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="dynamic-form">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="submission-container"></div>
+
+    <script>
+        fetch('http://localhost:3000/formFields')
+            .then(response => response.json())
+            .then(data => {
+                const formFields = data;
+                const dynamicForm = document.getElementById('dynamic-form');
+                formFields.forEach(field => {
+                    const label = document.createElement('label');
+                    label.textContent = field.label;
+                    dynamicForm.appendChild(label);
+
+                    const input = document.createElement('input');
+                    input.setAttribute('type', field.type);
+                    input.setAttribute('id', field.key);
+                    input.setAttribute('name', field.key);
+                    input.setAttribute('placeholder', field.label);
+                    if (field.maxLength) {
+                        input.setAttribute('maxlength', field.maxLength);
+                    }
+                    if (field.required) {
+                        input.setAttribute('required', 'required');
+                    }
+                    dynamicForm.appendChild(input);
+
+                    dynamicForm.appendChild(document.createElement('br'));
+                });
+            })
+            .catch(error => console.error('Error fetching form configuration:', error));
+
+        const form = document.getElementById('dynamic-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const formData = new FormData(form);
+    
+            fetch('http://localhost:3000/submissions', {
+                method: 'POST',
+                body: JSON.stringify(Object.fromEntries(formData)),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Submission successful:', data);
+            })
+            .catch(error => console.error('Error submitting form:', error));
+        });
+
+       
+        fetch('http://localhost:3000/submissions')
+            .then(response => response.json())
+            .then(submissions => {
+                const submissionContainer = document.getElementById('submission-container');
+                submissions.forEach(submission => {
+                    const submissionCard = document.createElement('div');
+                    submissionCard.textContent = JSON.stringify(submission);
+                    submissionContainer.appendChild(submissionCard);
+                });
+            })
+            .catch(error => console.error('Error fetching submissions:', error));
+    </script>
+</body>
+</html>
